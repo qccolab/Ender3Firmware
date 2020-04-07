@@ -82,6 +82,7 @@
 //#define BRENDON_ENDER_3
 //#define RYAN_ENDER_3
 #define NOAH_ENDER_3
+
 #include "printers.h"
 
 /**
@@ -1590,7 +1591,7 @@
  *
  * View the current statistics with M78.
  */
-#define PRINTCOUNTER
+//#define PRINTCOUNTER
 
 //=============================================================================
 //============================= LCD and SD support ============================
