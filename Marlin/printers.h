@@ -8,7 +8,7 @@
   #ifdef BLTOUCH
     #define Z_SAFE_HOMING
   #endif
-  #define NOZZLE_TO_PROBE_OFFSET { -43, -8, -2.400 }
+  #define NOZZLE_TO_PROBE_OFFSET { -43, -8, -2.87 }
   #define AUTO_BED_LEVELING_BILINEAR
   //#define SDSUPPORT
   #if ANY(LAB_ENDER_2,LAB_ENDER_3)
@@ -26,7 +26,7 @@
   #ifdef BLTOUCH
     #define Z_SAFE_HOMING
   #endif
-  #define NOZZLE_TO_PROBE_OFFSET { -43, -8, -1.850 }
+  #define NOZZLE_TO_PROBE_OFFSET { -43, -8, -2.250 }
   #define AUTO_BED_LEVELING_BILINEAR
   //#define SDSUPPORT
   #if ANY(LAB_ENDER_1,LAB_ENDER_3)
@@ -44,7 +44,7 @@
   #ifdef BLTOUCH
     #define Z_SAFE_HOMING
   #endif
-  #define NOZZLE_TO_PROBE_OFFSET { -43, -8, -1.630 }
+  #define NOZZLE_TO_PROBE_OFFSET { -43, -8, -2.025 }
   #define AUTO_BED_LEVELING_BILINEAR
   //#define SDSUPPORT
   #if ANY(LAB_ENDER_1,LAB_ENDER_2)
