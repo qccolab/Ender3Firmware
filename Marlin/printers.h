@@ -7,6 +7,8 @@
   #define BLTOUCH
   #ifdef BLTOUCH
     #define Z_SAFE_HOMING
+    #define SERVO0_PIN PA1
+    #define BLTOUCH_DELAY 500   // (ms) Enable and increase if needed
   #endif
   #define NOZZLE_TO_PROBE_OFFSET { -43, -8, -2.87 }
   #define AUTO_BED_LEVELING_BILINEAR
@@ -14,6 +16,18 @@
   #if ANY(LAB_ENDER_2,LAB_ENDER_3)
     #error You can only define one LAB_ENDER_# printer at a time
   #endif
+  #define USE_CONTROLLER_FAN
+  #define NOZZLE_PARK_FEATURE
+  #define ADVANCED_PAUSE_FEATURE
+  #define FILAMENT_RUNOUT_SENSOR
+  #define X_DRIVER_TYPE  TMC2209
+  #define Y_DRIVER_TYPE  TMC2209
+  #define Z_DRIVER_TYPE  TMC2209
+  #define E0_DRIVER_TYPE TMC2209
+  #define  X_SLAVE_ADDRESS 0
+  #define  Y_SLAVE_ADDRESS 2
+  #define  Z_SLAVE_ADDRESS 1
+  #define E0_SLAVE_ADDRESS 3
 #endif
 
 // QC Co-Lab Ender 3 (#2)
@@ -25,6 +39,8 @@
   #define BLTOUCH
   #ifdef BLTOUCH
     #define Z_SAFE_HOMING
+    #define SERVO0_PIN 27       // PA1 on BTT_SKR_MINI_E3_V2
+    #define BLTOUCH_DELAY 500   // (ms) Enable and increase if needed
   #endif
   #define NOZZLE_TO_PROBE_OFFSET { -43, -8, -2.250 }
   #define AUTO_BED_LEVELING_BILINEAR
@@ -43,6 +59,8 @@
   #define BLTOUCH
   #ifdef BLTOUCH
     #define Z_SAFE_HOMING
+    #define SERVO0_PIN 27       // PA1 on BTT_SKR_MINI_E3_V2
+    #define BLTOUCH_DELAY 500   // (ms) Enable and increase if needed
   #endif
   #define NOZZLE_TO_PROBE_OFFSET { -43, -8, -2.025 }
   #define AUTO_BED_LEVELING_BILINEAR
@@ -61,6 +79,8 @@
   #define BLTOUCH
   #ifdef BLTOUCH
     #define Z_SAFE_HOMING
+    #define SERVO0_PIN 27       // PA1 on BTT_SKR_MINI_E3_V2
+    #define BLTOUCH_DELAY 500   // (ms) Enable and increase if needed
   #endif
   #define NOZZLE_TO_PROBE_OFFSET { -43, -8, -1.630 }
   #define AUTO_BED_LEVELING_BILINEAR
@@ -78,6 +98,11 @@
   #define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 80.47 }
   #define Z_HOMING_HEIGHT 2
   //#define BLTOUCH
+  #ifdef BLTOUCH
+    #define Z_SAFE_HOMING
+    #define SERVO0_PIN 27       // PA1 on BTT_SKR_MINI_E3_V2
+    #define BLTOUCH_DELAY 500   // (ms) Enable and increase if needed
+  #endif
   #define NOZZLE_TO_PROBE_OFFSET { -43, -8, -1.630 }
   #define SDSUPPORT
   #if ANY(LAB_ENDER_1,LAB_ENDER_2)
@@ -93,6 +118,8 @@
   #define BLTOUCH
   #ifdef BLTOUCH
     #define Z_SAFE_HOMING
+    #define SERVO0_PIN 27       // PA1 on BTT_SKR_MINI_E3_V2
+    #define BLTOUCH_DELAY 500   // (ms) Enable and increase if needed
   #endif
   #undef ARC_SUPPORT
   #define NOZZLE_TO_PROBE_OFFSET { -43, -8, -2.630 }
