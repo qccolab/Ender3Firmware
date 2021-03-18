@@ -75,7 +75,7 @@
 
 // Define one of these to build for that printer.
 #define LAB_ENDER_1
-//#define LAB_ENDER_2
+#define LAB_ENDER_2
 //#define LAB_ENDER_3
 //#define BRIAN_ENDER_3
 //#define BRENDON_ENDER_3

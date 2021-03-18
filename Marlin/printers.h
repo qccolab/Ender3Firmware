@@ -10,12 +10,9 @@
     #define SERVO0_PIN PA1
     #define BLTOUCH_DELAY 500   // (ms) Enable and increase if needed
   #endif
-  #define NOZZLE_TO_PROBE_OFFSET { -43, -8, -2.87 }
+  #define NOZZLE_TO_PROBE_OFFSET { -43, -8, -2.77 }
   #define AUTO_BED_LEVELING_BILINEAR
   //#define SDSUPPORT
-  #if ANY(LAB_ENDER_2,LAB_ENDER_3)
-    #error You can only define one LAB_ENDER_# printer at a time
-  #endif
   #define USE_CONTROLLER_FAN
   #define NOZZLE_PARK_FEATURE
   #define ADVANCED_PAUSE_FEATURE
@@ -32,6 +29,9 @@
 
 // QC Co-Lab Ender 3 (#2)
 #ifdef LAB_ENDER_2
+  #ifdef CUSTOM_MACHINE_NAME
+    #error You can only define one printer at a time
+  #endif
   #define CUSTOM_MACHINE_NAME "Ender-3Pro (2)"
   #define ISCE3PRO
   #define MACHINE_UUID "bc2921b4-00b8-4113-85f3-b5288d0f6303"
@@ -45,13 +45,13 @@
   #define NOZZLE_TO_PROBE_OFFSET { -43, -8, -2.250 }
   #define AUTO_BED_LEVELING_BILINEAR
   //#define SDSUPPORT
-  #if ANY(LAB_ENDER_1,LAB_ENDER_3)
-    #error You can only define one LAB_ENDER_# printer at a time
-  #endif
 #endif
 
 // QC Co-Lab Ender 3 (#3)
 #ifdef LAB_ENDER_3
+  #ifdef CUSTOM_MACHINE_NAME
+    #error You can only define one printer at a time
+  #endif
   #define CUSTOM_MACHINE_NAME "Ender-3Pro (3)"
   #define ISCE3PRO
   #define MACHINE_UUID "abd439ed-5d0b-4565-8515-7358103c0c7d"
@@ -65,13 +65,13 @@
   #define NOZZLE_TO_PROBE_OFFSET { -43, -8, -2.025 }
   #define AUTO_BED_LEVELING_BILINEAR
   //#define SDSUPPORT
-  #if ANY(LAB_ENDER_1,LAB_ENDER_2)
-    #error You can only define one LAB_ENDER_# printer at a time
-  #endif
 #endif
 
 // Brian Schultz
 #ifdef BRIAN_ENDER_3
+  #ifdef CUSTOM_MACHINE_NAME
+    #error You can only define one printer at a time
+  #endif
   #define CUSTOM_MACHINE_NAME "Ender-3 Pro"
   #define ISCE3PRO
   #define MACHINE_UUID "7d24371e-f94d-411f-8175-c4242e104d61"
@@ -85,13 +85,13 @@
   #define NOZZLE_TO_PROBE_OFFSET { -43, -8, -1.630 }
   #define AUTO_BED_LEVELING_BILINEAR
   //#define SDSUPPORT
-  #if ANY(LAB_ENDER_1,LAB_ENDER_2)
-    #error You can only define one LAB_ENDER_# printer at a time
-  #endif
 #endif
 
 // Brendon Telman
 #ifdef BRENDON_ENDER_3
+  #ifdef CUSTOM_MACHINE_NAME
+    #error You can only define one printer at a time
+  #endif
   #define ISCE3PRO
   #define CUSTOM_MACHINE_NAME "Ender-3 Pro"
   #define MACHINE_UUID "7d096e07-5805-4b25-a628-0e029acbe162"
@@ -105,13 +105,13 @@
   #endif
   #define NOZZLE_TO_PROBE_OFFSET { -43, -8, -1.630 }
   #define SDSUPPORT
-  #if ANY(LAB_ENDER_1,LAB_ENDER_2)
-    #error You can only define one LAB_ENDER_# printer at a time
-  #endif
 #endif
 
 // Ryan Weekly
 #ifdef RYAN_ENDER_3
+  #ifdef CUSTOM_MACHINE_NAME
+    #error You can only define one printer at a time
+  #endif
   #define CUSTOM_MACHINE_NAME "Ender-3"
   #define MACHINE_UUID "959dc340-1f4b-47f2-ab20-07d5ee03d233"
   #define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 93 }
@@ -125,13 +125,13 @@
   #define NOZZLE_TO_PROBE_OFFSET { -43, -8, -2.630 }
   #define SDSUPPORT
   #define PRINTCOUNTER
-  #if ANY(LAB_ENDER_1,LAB_ENDER_2)
-    #error You can only define one LAB_ENDER_# printer at a time
-  #endif
 #endif
 
 // Noah Berkland
 #ifdef NOAH_ENDER_3
+  #ifdef CUSTOM_MACHINE_NAME
+    #error You can only define one printer at a time
+  #endif
   #define ISCE3PRO
   #define CUSTOM_MACHINE_NAME "Ender-3 Pro"
   #define MACHINE_UUID "959dc340-1f4b-47f2-ab20-07d5ee03d233"
@@ -140,7 +140,4 @@
   #define NOZZLE_TO_PROBE_OFFSET { -43, -8, -1.630 }
   #define SDSUPPORT
   #define PRINTCOUNTER
-  #if ANY(LAB_ENDER_1,LAB_ENDER_2)
-    #error You can only define one LAB_ENDER_# printer at a time
-  #endif
 #endif
