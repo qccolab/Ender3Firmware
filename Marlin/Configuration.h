@@ -74,9 +74,9 @@
 //#define CUSTOM_VERSION_FILE Version.h // Path from the root directory (no quotes)
 
 // Define one of these to build for that printer.
-#define LAB_ENDER_1
-#define LAB_ENDER_2
-//#define LAB_ENDER_3
+//#define LAB_ENDER_1
+//#define LAB_ENDER_2
+#define LAB_ENDER_3
 //#define BRIAN_ENDER_3
 //#define BRENDON_ENDER_3
 //#define RYAN_ENDER_3
@@ -114,13 +114,17 @@
  *
  * :[-1, 0, 1, 2, 3, 4, 5, 6, 7]
  */
-#define SERIAL_PORT -1
+#ifndef SERIAL_PORT
+  #define SERIAL_PORT 0
+#endif
 
 /**
  * Select a secondary serial port on the board to use for communication with the host.
  * :[-1, 0, 1, 2, 3, 4, 5, 6, 7]
  */
-#define SERIAL_PORT_2 2
+#ifndef SERIAL_PORT_2
+  //#define SERIAL_PORT_2 -1
+#endif
 
 /**
  * This setting determines the communication speed of the printer.
@@ -138,7 +142,7 @@
 
 // Choose the name from boards.h that matches your setup
 #ifndef MOTHERBOARD
-  #define MOTHERBOARD BOARD_BTT_SKR_MINI_E3_V2_0
+  #define MOTHERBOARD BOARD_MELZI_CREALITY
 #endif
 
 // Name displayed in the LCD "Ready" message and Info menu
@@ -588,7 +592,7 @@
  * Note: For Bowden Extruders make this large enough to allow load/unload.
  */
 #define PREVENT_LENGTHY_EXTRUDE
-#define EXTRUDE_MAXLENGTH 200
+#define EXTRUDE_MAXLENGTH 450
 
 //===========================================================================
 //======================== Thermal Runaway Protection =======================
@@ -1553,7 +1557,7 @@
 
 #if ENABLED(NOZZLE_PARK_FEATURE)
   // Specify a park position as { X, Y, Z_raise }
-  #define NOZZLE_PARK_POINT { (X_MIN_POS + 10), (Y_MAX_POS - 10), 20 }
+  #define NOZZLE_PARK_POINT { (X_MIN_POS + 10), (Y_MIN_POS + 10), 20 }
   //#define NOZZLE_PARK_X_ONLY          // X move only is required to park
   //#define NOZZLE_PARK_Y_ONLY          // Y move only is required to park
   #define NOZZLE_PARK_Z_RAISE_MIN   5   // (mm) Always raise Z by at least this distance

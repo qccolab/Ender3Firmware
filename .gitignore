@@ -1,6 +1,7 @@
 # ignore Dirs
 build/
 .vscode/
+.pio/
 
 # Prerequisites
 *.d
